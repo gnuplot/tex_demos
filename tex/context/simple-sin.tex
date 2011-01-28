@@ -1,0 +1,26 @@
+\enableregime
+	[utf-8]
+\setupcolors
+	[state=start]
+\usemodule
+	[gnuplot]
+
+\starttext
+
+\startGNUPLOTinclusions
+set format y '$%.1f$'
+set xzeroaxis
+set yzeroaxis
+set xtics ('$-2π$' -2*pi, '$-π$' -pi, '$0$' 0, '$π$' pi, '$2π$' 2*pi)
+\stopGNUPLOTinclusions
+
+\startGNUPLOTscript[sin]
+set samples 400
+plot [-2*pi:2*pi] sin(x) t '$\sin(x)$' lw 3
+\stopGNUPLOTscript
+
+\startTEXpage
+\hbox{\useGNUPLOTgraphic[sin]}
+\stopTEXpage
+
+\stoptext
