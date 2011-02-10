@@ -1,0 +1,5 @@
+demoname='context'
+set term context standalone size 5in,3in textscale 0.7 \
+	header '\usetypescript[antykwa-torunska]\setupbodyfont[antykwa]'
+load 'load_demos.dem'
+

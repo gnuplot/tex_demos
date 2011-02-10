@@ -1,0 +1,19 @@
+
+dir_script = GPVAL_PWD
+cd '../tex'
+dir_demos = GPVAL_PWD
+cd dir_script
+cd '../output'
+cd demoname
+dir_output = GPVAL_PWD
+
+# if (strstrt(GPVAL_TERM, 'tikz')) set term tikz createstyle
+
+reset
+cd dir_output ; set output 'circles.tex' ; cd dir_demos ; 
+load 'circles.dem'
+
+
+cd dir_script
+set output
+reset

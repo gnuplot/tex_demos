@@ -1,0 +1,3 @@
+demoname='tikz_latex'
+set term tikz latex standalone
+load 'load_demos.dem'
