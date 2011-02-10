@@ -1,0 +1,16 @@
+\startenvironment common_definitions
+
+\starttypescript [serif] [frscript] [name]
+	\definefontsynonym [Serif] [file:frscript]
+\stoptypescript
+\starttypescript [frscript]
+	\definetypeface [frscript] [rm] [serif] [frscript] [default]
+	\quittypescriptscanning
+\stoptypescript
+
+\usetypescript[frscript]
+\usetypescript[antykwa-torunska]
+
+\setupbodyfont[antykwa]
+
+\stopenvironment

@@ -7,12 +7,14 @@ cd '../output'
 cd demoname
 dir_output = GPVAL_PWD
 
+foo=rand(42)
+
 # if (strstrt(GPVAL_TERM, 'tikz')) set term tikz createstyle
 
-reset; cd dir_output ; set output 'test.tex' ; test ;
-
-reset; cd dir_output ; set output 'circles.tex' ; cd dir_demos ; load 'circles.dem'
-
+reset; cd dir_output ; set output 'test.tex'     ; test ;
+reset; cd dir_output ; set output 'circles.tex'  ; cd dir_demos ; load 'circles.dem'
+reset; cd dir_output ; set output 'fillcrvs.tex' ; cd dir_demos ; load 'fillcrvs.dem'
+reset; cd dir_output ; set output 'transparent_solids.tex' ; cd dir_demos ; load 'transparent_solids.dem'
 
 cd dir_script
 set output
