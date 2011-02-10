@@ -1,0 +1,5 @@
+demoname='epslatex'
+set term epslatex standalone
+load 'load_demos.dem'
+
+# TODO: move circles-inc to output folder
