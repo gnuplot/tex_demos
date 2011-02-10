@@ -9,9 +9,9 @@ dir_output = GPVAL_PWD
 
 # if (strstrt(GPVAL_TERM, 'tikz')) set term tikz createstyle
 
-reset
-cd dir_output ; set output 'circles.tex' ; cd dir_demos ; 
-load 'circles.dem'
+reset; cd dir_output ; set output 'test.tex' ; test ;
+
+reset; cd dir_output ; set output 'circles.tex' ; cd dir_demos ; load 'circles.dem'
 
 
 cd dir_script
