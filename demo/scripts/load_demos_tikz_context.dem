@@ -1,4 +1,4 @@
 demoname='tikz_context'
 set term tikz context standalone size 5in,3in \
-	header '\usetypescript[antykwa-torunska]\setupbodyfont[antykwa]'
+	header '\environment common_definitions'
 load 'load_demos.dem'

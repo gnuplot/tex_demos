@@ -1,0 +1,36 @@
+# demo for plotting images using pixels and binary 2d data
+#
+# This demo can be used for terminals supporting image display.
+# Currently supported are:  X11, Aqua, postscript, png, pdf, svg,
+# (e)pslatex, pstex, emf, wxt.
+
+# Prepared by Dan Sebald
+# History:
+#	- Nov   2006 EAM: split into two files
+#	- 9.23. 2003 ds: redone in response to discussion list feedback
+#	- 5. 3. 2003 ds: 1st version
+
+if ((GPVAL_VERSION == 4.3 || GPVAL_VERSION == 4.2) \
+&&  (!strstrt(GPVAL_COMPILE_OPTIONS,"+IMAGE"))) \
+    print ">>> Skipping demo <<<\n" ; \
+    print "This copy of gnuplot was built without support for plotting images" ; \
+    exit ;
+
+# print ""
+# print "The plotting styles \`image\` and \`rgbimage\` are intended for plotting"
+# print "images described in a data file either in the convential ASCII format or"
+# print "in a binary format described by the qualifiers \`binary\` and \`using\`."
+# print "All pixels have an (x,y) or (x,y,z) coordinate.  These values can be"
+# print "included in the data file or implicitly determined with the sampling"
+# print "\'array\' key word and sampling periods \'dx\' and \'dy\'.  The key words"
+# print "\'rotate\' and, for 3d plots, \'perpendicular\' control orientation."
+# print "\nThe data for this image was stored as RGB triples, one byte per channel,"
+# print "without (x,y) coordinate information.  This yields a most compact file."
+# print "The plotting command is displayed on the graph."
+# print ""
+reset
+set title "Larry Ewing's GIMP penguin on vacation basking in\nthe balmy waters off the coast of Murmansk"
+set xrange [-10:137]
+set yrange [-10:157]
+set label "\"I flew here... by plane.  Why?  For the halibut.\"" at 64,135 center
+plot 'blutux.rgb' binary array=(128,128) flipy format='%uchar' with rgbimage title "'blutux.rgb' binary array=(128,128) flipy format='\\%uchar' with rgbimage"

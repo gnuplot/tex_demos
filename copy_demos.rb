@@ -7,7 +7,7 @@ class Demo
 	end
 	def get_content
 		f = File.open("demo/original/#{@name}.dem")
-		data = f.read.gsub(/^(pause.*)$/, '# \1')
+		data = f.read.gsub(/^(pause.*)$/, '# \1').gsub(/^(print.*)$/, '# \1')
 		f.close
 		return data
 	end
@@ -41,3 +41,24 @@ fillcrvs.write_file(data)
 transparent_solids = Demo.new('transparent_solids', [])
 data = transparent_solids.get_content
 transparent_solids.write_file(data)
+
+rgbalpha = Demo.new('rgbalpha',['lena.rgb'])
+rgbalpha.copy_file
+
+rgb_variable = Demo.new('rgb_variable',['rgb_variable.dat'])
+data = rgb_variable.get_content.gsub(/^(splot.*?), \\$/, '\1 notitle, \\')
+rgb_variable.write_file(data)
+
+rainbow = Demo.new('rainbow',['colorwheel.dem'])
+rainbow.copy_file
+
+pm3dcolors = Demo.new('pm3dcolors',[])
+# data = pm3dcolors.get_content.gsub(/(set title.*defined.*?)#(.*?)#(.*?)#(.*?)#(.*)$/, '\1\\#\2\\#\3\\#\4\\#\5')
+data = pm3dcolors.get_content.gsub(/(set title.*defined.*?)#(.*?)#(.*?)#(.*?)#(.*)$/, '\1\2\3\4\5')
+pm3dcolors.write_file(data)
+
+image = Demo.new('image',['blutux.rgb'])
+data = image.get_content.gsub(/# pause.*/m,'').gsub(
+	/(plot 'blutux.rgb' binary array=\(128,128\) flipy format='%uchar' with rgbimage)/,
+	'\1 title "\'blutux.rgb\' binary array=(128,128) flipy format=\'\\\\\\\\%uchar\' with rgbimage"')
+image.write_file(data)

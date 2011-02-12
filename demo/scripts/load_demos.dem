@@ -11,10 +11,17 @@ foo=rand(42)
 
 # if (strstrt(GPVAL_TERM, 'tikz')) set term tikz createstyle
 
-reset; cd dir_output ; set output 'test.tex'     ; test ;
-reset; cd dir_output ; set output 'circles.tex'  ; cd dir_demos ; load 'circles.dem'
-reset; cd dir_output ; set output 'fillcrvs.tex' ; cd dir_demos ; load 'fillcrvs.dem'
+reset; cd dir_output ; set output 'test.tex'         ; test ;
+reset; cd dir_output ; set output 'circles.tex'      ; cd dir_demos ; load 'circles.dem'
+reset; cd dir_output ; set output 'fillcrvs.tex'     ; cd dir_demos ; load 'fillcrvs.dem'
+reset; cd dir_output ; set output 'pm3dcolors.tex'   ; cd dir_demos ; load 'pm3dcolors.dem'
+reset; cd dir_output ; set output 'rainbow.tex'      ; cd dir_demos ; load 'rainbow.dem'
+reset; cd dir_output ; set output 'rgbalpha.tex'     ; cd dir_demos ; load 'rgbalpha.dem'
+reset; cd dir_output ; set output 'rgb_variable.tex' ; cd dir_demos ; load 'rgb_variable.dem'
+
 reset; cd dir_output ; set output 'transparent_solids.tex' ; cd dir_demos ; load 'transparent_solids.dem'
+
+reset; cd dir_output ; set output 'image.tex' ; cd dir_demos ; load 'image.dem'
 
 cd dir_script
 set output

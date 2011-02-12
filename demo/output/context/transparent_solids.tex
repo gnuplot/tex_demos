@@ -1,4 +1,4 @@
-% Written by ConTeXt terminal for GNUPLOT on: Thu Feb 10 23:39:53 2011
+% Written by ConTeXt terminal for GNUPLOT on: Sat Feb 12 10:44:19 2011
 % GNUPLOT version 4.5 patchlevel 0
 % See also http://wiki.contextgarden.net/Gnuplot
 %
@@ -40,11 +40,12 @@ gp_scale_text := 0.7;
 % pointsize scaling factor
 gp_set_pointsize(1);
 % linewidth scaling factor for individual lines
-gp_set_linewidth(1);
+gp_set_linewidth(2);
 % for additional user-defined settings
 gp_setup_after;
 % -------------------------
 gp_make_palette(color_mode(rgb);formulae(8,9,7));
+gp_set_linewidth(1.000);
 gp_set_linetype(-2);
 gp_set_color(rgb(0.75,0.75,0.75));
 p := unitsquare xyscaled (119.99a,71.99b) shifted (0.00a,0.00b);
@@ -54,7 +55,7 @@ p := (0.00a,0.00b)--(0.00a,71.99b)--(119.99a,71.99b)--(119.99a,0.00b)
   --(0.00a,0.00b)--cycle;
 gp_draw(p);
 gp_set_linetype(-2);
-gp_put_text((59.99a, 66.40b), align(center), \sometxt[gp][frscript]{Interlocking Tori - PM3D surface with depth sorting and transparency});
+gp_put_text((59.99a, 66.40b), align(center), \sometxt[gp]{Interlocking Tori - PM3D surface with depth sorting and transparency});
 gp_set_linetype(0);
 gp_set_linewidth(0.500);
 gp_set_linetype(1);
@@ -30679,37 +30680,37 @@ p := (105.46a,31.12b)--(109.89a,31.12b)--(109.89a,52.49b)--(105.46a,52.49b)
 gp_draw(p);
 p := (109.89a,31.12b)--(108.73a,31.12b);
 gp_draw(p);
-gp_put_text((111.25a, 31.12b), align(left), \sometxt[gp][frscript]{-1.5});
+gp_put_text((111.25a, 31.12b), align(left), \sometxt[gp]{-1.5});
 p := (105.46a,31.12b)--(106.62a,31.12b);
 gp_draw(p);
 p := (109.89a,34.68b)--(108.73a,34.68b);
 gp_draw(p);
-gp_put_text((111.25a, 34.68b), align(left), \sometxt[gp][frscript]{-1});
+gp_put_text((111.25a, 34.68b), align(left), \sometxt[gp]{-1});
 p := (105.46a,34.68b)--(106.62a,34.68b);
 gp_draw(p);
 p := (109.89a,38.24b)--(108.73a,38.24b);
 gp_draw(p);
-gp_put_text((111.25a, 38.24b), align(left), \sometxt[gp][frscript]{-0.5});
+gp_put_text((111.25a, 38.24b), align(left), \sometxt[gp]{-0.5});
 p := (105.46a,38.24b)--(106.62a,38.24b);
 gp_draw(p);
 p := (109.89a,41.80b)--(108.73a,41.80b);
 gp_draw(p);
-gp_put_text((111.25a, 41.80b), align(left), \sometxt[gp][frscript]{0});
+gp_put_text((111.25a, 41.80b), align(left), \sometxt[gp]{0});
 p := (105.46a,41.80b)--(106.62a,41.80b);
 gp_draw(p);
 p := (109.89a,45.36b)--(108.73a,45.36b);
 gp_draw(p);
-gp_put_text((111.25a, 45.36b), align(left), \sometxt[gp][frscript]{0.5});
+gp_put_text((111.25a, 45.36b), align(left), \sometxt[gp]{0.5});
 p := (105.46a,45.36b)--(106.62a,45.36b);
 gp_draw(p);
 p := (109.89a,48.92b)--(108.73a,48.92b);
 gp_draw(p);
-gp_put_text((111.25a, 48.92b), align(left), \sometxt[gp][frscript]{1});
+gp_put_text((111.25a, 48.92b), align(left), \sometxt[gp]{1});
 p := (105.46a,48.92b)--(106.62a,48.92b);
 gp_draw(p);
 p := (109.89a,52.49b)--(108.73a,52.49b);
 gp_draw(p);
-gp_put_text((111.25a, 52.49b), align(left), \sometxt[gp][frscript]{1.5});
+gp_put_text((111.25a, 52.49b), align(left), \sometxt[gp]{1.5});
 p := (105.46a,52.49b)--(106.62a,52.49b);
 gp_draw(p);
 setbounds currentpicture to unitsquare xyscaled (w,h); % 0 0 1 1
@@ -50749,7 +50750,6 @@ gp_set_color(lt(-2));
 p := (44.59a,41.89b)--(49.96a,42.76b)--(49.95a,42.74b)--(44.58a,41.76b)
   --(44.59a,41.89b)--cycle;
 gp_draw(p);
-gp_set_pointsize(1.000);
 setbounds currentpicture to unitsquare xyscaled (w,h); % 0 0 1 1
 \stopGNUPLOTpage
 \stoptext
