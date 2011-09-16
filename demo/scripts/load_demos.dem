@@ -18,6 +18,7 @@ reset; cd dir_output ; set output 'pm3dcolors.tex'   ; cd dir_demos ; load 'pm3d
 reset; cd dir_output ; set output 'rainbow.tex'      ; cd dir_demos ; load 'rainbow.dem'
 reset; cd dir_output ; set output 'rgbalpha.tex'     ; cd dir_demos ; load 'rgbalpha.dem'
 reset; cd dir_output ; set output 'rgb_variable.tex' ; cd dir_demos ; load 'rgb_variable.dem'
+reset; cd dir_output ; set output 'transparent.tex'  ; cd dir_demos ; load 'transparent.dem'
 
 reset; cd dir_output ; set output 'transparent_solids.tex' ; cd dir_demos ; load 'transparent_solids.dem'
 

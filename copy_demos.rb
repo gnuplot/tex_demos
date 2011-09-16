@@ -38,6 +38,10 @@ data = fillcrvs.get_content
 # end
 fillcrvs.write_file(data)
 
+transparent_solids = Demo.new('transparent', [])
+data = transparent_solids.get_content
+transparent_solids.write_file(data)
+
 transparent_solids = Demo.new('transparent_solids', [])
 data = transparent_solids.get_content
 transparent_solids.write_file(data)

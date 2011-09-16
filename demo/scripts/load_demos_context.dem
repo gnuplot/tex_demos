@@ -1,5 +1,5 @@
 demoname='context'
-set term context standalone size 5in,3in textscale 0.7 \
+set term context standalone notimestamp size 5in,3in textscale 0.7 \
 	header '\environment common_definitions'
 load 'load_demos.dem'
 
